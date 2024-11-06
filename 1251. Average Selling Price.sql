@@ -67,3 +67,11 @@ Average selling price for product 1 = ((100 * 5) + (15 * 20)) / 115 = 6.96
 Average selling price for product 2 = ((200 * 15) + (30 * 30)) / 230 = 16.96
 **/
 
+SELECT 
+    p.product_id
+    ,IFNULL(ROUND(SUM(units*price)/SUM(units),2),0) AS average_price
+FROM 
+    Prices p 
+LEFT JOIN UnitsSold u ON p.product_id = u.product_id
+AND u.purchase_date BETWEEN p.start_date AND p.end_date
+GROUP BY product_id
