@@ -45,9 +45,12 @@ Output:
 +----------+---------+-------------+----------------+--------------------+-----------------------+
 **/
 
+<<<<<<< HEAD
 
 --Nao testei ainda, sem internet 
 
+=======
+>>>>>>> 9a3718e (Novos desafios)
 SELECT 
     DATE_FORMAT(trans_date, '%Y-%m') AS month
     ,country

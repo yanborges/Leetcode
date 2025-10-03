@@ -1,4 +1,4 @@
-/**
+`/**
 Table: Delivery
 
 +-----------------------------+---------+
@@ -52,8 +52,11 @@ The customer id 4 has a first order with delivery id 7 and it is immediate.
 Hence, half the customers have immediate first orders.
 **/
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9a3718e (Novos desafios)
 SELECT 
     ROUND(AVG(CASE WHEN order_date = customer_pref_delivery_date THEN 1 ELSE 0 END)*100, 2) AS immediate_percentage
 FROM Delivery
